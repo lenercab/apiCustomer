@@ -1,0 +1,20 @@
+-------------------------------------------------------------------------------
+Test set: com.customer.apirest.service.CustomerServiceTest
+-------------------------------------------------------------------------------
+Tests run: 10, Failures: 0, Errors: 3, Skipped: 0, Time elapsed: 0.212 s <<< FAILURE! - in com.customer.apirest.service.CustomerServiceTest
+updateCustomer(com.customer.apirest.service.CustomerServiceTest)  Time elapsed: 0.008 s  <<< ERROR!
+java.lang.ExceptionInInitializerError
+	at com.customer.apirest.service.CustomerServiceTest.updateCustomer(CustomerServiceTest.java:138)
+Caused by: java.lang.RuntimeException: java.lang.NoSuchFieldException: modifiers
+	at com.customer.apirest.service.CustomerServiceTest.updateCustomer(CustomerServiceTest.java:138)
+Caused by: java.lang.NoSuchFieldException: modifiers
+	at com.customer.apirest.service.CustomerServiceTest.updateCustomer(CustomerServiceTest.java:138)
+
+insertCustomer_when_Already_exists_customer(com.customer.apirest.service.CustomerServiceTest)  Time elapsed: 0.002 s  <<< ERROR!
+java.lang.Exception: Unexpected exception, expected<com.customer.apirest.exception.CustomerExistException> but was<java.lang.NoClassDefFoundError>
+	at com.customer.apirest.service.CustomerServiceTest.insertCustomer_when_Already_exists_customer(CustomerServiceTest.java:71)
+
+insertCustomer(com.customer.apirest.service.CustomerServiceTest)  Time elapsed: 0.001 s  <<< ERROR!
+java.lang.NoClassDefFoundError: Could not initialize class mockit.MockUp
+	at com.customer.apirest.service.CustomerServiceTest.insertCustomer(CustomerServiceTest.java:51)
+
