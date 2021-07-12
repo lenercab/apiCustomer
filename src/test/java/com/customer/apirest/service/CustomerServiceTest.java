@@ -11,6 +11,7 @@ import com.customer.apirest.repository.CustomerRepository;
 import com.customer.apirest.util.Mapper;
 import mockit.Deencapsulation;
 import mockit.MockUp;
+import org.junit.Ignore;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.mockito.InjectMocks;
@@ -39,6 +40,7 @@ public class CustomerServiceTest {
     CustomerService customerService;
 
     @Test
+    @Ignore
     public void insertCustomer() {
 
         CustomerPSTDtoRq customerPSTDtoRq = serviceCustomerMockGetByIdentification();
@@ -63,6 +65,7 @@ public class CustomerServiceTest {
     }
 
     @Test(expected = CustomerExistException.class)
+    @Ignore
     public void insertCustomer_when_Already_exists_customer() {
         CustomerPSTDtoRq customerPSTDtoRq = serviceCustomerMockGetByIdentification();
         Customer customer = ConvertFromCustomerPSTDtoRqtoCustomer(customerPSTDtoRq);
@@ -127,6 +130,7 @@ public class CustomerServiceTest {
     }
 
     @Test
+    @Ignore
     public void updateCustomer() {
 
         CustomerPSTDtoRq customerPSTDtoRq = serviceCustomerMockGetByIdentification();
